@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import GlobalStyles from "./styles/GlobalStyles";
+
+import Box from "./components/Box/index";
+import Header from "./components/Header";
+import Title from "./components/Title";
+import Spacer from "./components/Spacer";
+import Form from "./components/Form";
+import Label from "./components/Label";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStyles />
+      <Box>
+        <Header>
+          <Title>
+            Formulário <br />
+            para compra de <br /> <strong>Pacote de Stickers </strong>
+          </Title>
+        </Header>
+        <Spacer size="small"></Spacer>
+        <Form>
+          <fieldset>
+            <Label>Quais stickers?</Label>
+          </fieldset>
+        </Form>
+      </Box>
     </div>
   );
 }
